@@ -247,12 +247,12 @@ public class CarController : MonoBehaviour
                 {
                     Debug.Log("Turn Left");
                     turnTimer += Time.deltaTime;
-                    if (turnTimer < 1.5f || turnTimer > 3.0f)
+                    if (turnTimer < 0.4f || turnTimer > 2.0f)
                     {
                         verticalInput = 0.3f;
                         horizontalInput = 0.0f;
                     }
-                    else if (turnTimer >= 1.5f && turnTimer <= 3.0f)
+                    else if (turnTimer >= 0.4f && turnTimer <= 2.0f)
                     {
                         verticalInput = 0.3f;
                         horizontalInput = -1.0f;
@@ -393,7 +393,7 @@ public class CarController : MonoBehaviour
 
     private void crossRoadCheck()
     {
-        if (radars.hitRightFront.distance > 10.0f && radars.hitLeftFront.distance > 10.0f && crossProcess == false && stopForPassenger == false)
+        if (radars.hitRightFront.distance > 9.0f && radars.hitLeftFront.distance > 9.0f && crossProcess == false && stopForPassenger == false)
         {
             // Crossing change state to decide!
             carState = (int)states.decide;
@@ -403,7 +403,7 @@ public class CarController : MonoBehaviour
             horizontalInput = 0.0f;
             CarBrake();
         }
-        else if (radars.hitRightFront.distance >= radars.hitLeftFront.distance + 10.0f && crossProcess == false && stopForPassenger == false)
+        else if (radars.hitRightFront.distance >= radars.hitLeftFront.distance + 5.0f && crossProcess == false && stopForPassenger == false)
         {
             if (willTurn == false)
             {
@@ -422,7 +422,7 @@ public class CarController : MonoBehaviour
                 CarBrake();
             }
         }
-        else if (radars.hitLeftFront.distance >= radars.hitRightFront.distance + 10.0f && crossProcess == false && stopForPassenger == false)
+        else if (radars.hitLeftFront.distance >= radars.hitRightFront.distance + 5.0f && crossProcess == false && stopForPassenger == false)
         {
             if(willTurn == false)
             {
