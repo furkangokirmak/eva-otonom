@@ -227,23 +227,23 @@ public class CarController : MonoBehaviour
                     turnTimer += Time.deltaTime;
                     CarDrive();
                 }
-                else if (turnDirection == (int)signs.turnRight && turnTimer < 4.0f)
+                else if (turnDirection == (int)signs.turnRight && turnTimer < 3.0f)
                 {
                     Debug.Log("Turn Right");
                     turnTimer += Time.deltaTime;
-                    if (turnTimer < 1.5f || turnTimer > 3.0f)
+                    if (turnTimer < 0.4f || turnTimer > 2.0f)
                     {
                         verticalInput = 0.3f;
                         horizontalInput = 0.0f;
                     }
-                    else if (turnTimer >= 1.5f && turnTimer <= 3.0f)
+                    else if (turnTimer >= 0.4f && turnTimer <= 2.0f)
                     {
                         verticalInput = 0.3f;
                         horizontalInput = 1.0f;
                     }
                     CarDrive();
                 }
-                else if (turnDirection == (int)signs.turnLeft && turnTimer < 4.0f)
+                else if (turnDirection == (int)signs.turnLeft && turnTimer < 3.0f)
                 {
                     Debug.Log("Turn Left");
                     turnTimer += Time.deltaTime;

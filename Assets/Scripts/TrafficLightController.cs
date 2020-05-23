@@ -61,7 +61,7 @@ public class TrafficLightController : MonoBehaviour
 
             if (Physics.Raycast(light1[0].transform.position, direction, out raycast))
             {
-                if (raycast.collider.name == "Car" && raycast.distance < 20.0f && Vector3.Angle(car.transform.position, direction) > (155.0f))
+                if (raycast.collider.name == "Car" && raycast.distance < 1.0f && Vector3.Angle(car.transform.position, direction) > (90.0f))
                 {
                     Debug.DrawRay(light1[0].transform.position, direction, Color.yellow);
                     //Debug.Log("L1 ANGLE: " + Vector3.Angle(car.transform.position, direction));
@@ -79,7 +79,7 @@ public class TrafficLightController : MonoBehaviour
 
             if (Physics.Raycast(light2[0].transform.position, direction, out raycast))
             {
-                if (raycast.collider.name == "Car" && raycast.distance < 20.0f && Vector3.Angle(car.transform.position, direction) > (155.0f))
+                if (raycast.collider.name == "Car" && raycast.distance < 1.0f && Vector3.Angle(car.transform.position, direction) > (90.0f))
                 {
                     Debug.DrawRay(light2[0].transform.position, direction, Color.yellow);
                     //Debug.Log("L2 ANGLE: " + Vector3.Angle(car.transform.position, direction));
