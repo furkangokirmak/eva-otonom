@@ -231,12 +231,20 @@ public class CarController : MonoBehaviour
                 {
                     Debug.Log("Turn Right");
                     turnTimer += Time.deltaTime;
+<<<<<<< HEAD
                     if (turnTimer < 0.4f || turnTimer > 2.0f)
+=======
+                    if (turnTimer < 0.4f || turnTimer > 2.4f)
+>>>>>>> 6691145c7bd88180f8103d2d0c3da6143935c642
                     {
                         verticalInput = 0.3f;
                         horizontalInput = 0.0f;
                     }
+<<<<<<< HEAD
                     else if (turnTimer >= 0.4f && turnTimer <= 2.0f)
+=======
+                    else if (turnTimer >= 0.4f && turnTimer <= 2.4f)
+>>>>>>> 6691145c7bd88180f8103d2d0c3da6143935c642
                     {
                         verticalInput = 0.3f;
                         horizontalInput = 1.0f;
@@ -247,12 +255,12 @@ public class CarController : MonoBehaviour
                 {
                     Debug.Log("Turn Left");
                     turnTimer += Time.deltaTime;
-                    if (turnTimer < 0.4f || turnTimer > 2.0f)
+                    if (turnTimer < 0.4f || turnTimer > 2.4f)
                     {
                         verticalInput = 0.3f;
                         horizontalInput = 0.0f;
                     }
-                    else if (turnTimer >= 0.4f && turnTimer <= 2.0f)
+                    else if (turnTimer >= 0.4f && turnTimer <= 2.4f)
                     {
                         verticalInput = 0.3f;
                         horizontalInput = -1.0f;

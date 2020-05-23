@@ -26,7 +26,11 @@ public class SignController : MonoBehaviour
             
             if (Physics.Raycast(transform.position, direction, out raycast))
             {
+<<<<<<< HEAD
                 if (raycast.collider.name == "Car" && raycast.distance < 5.5f  && Vector3.Angle(car.transform.position, direction) > (50.0f))
+=======
+                if (raycast.collider.name == "Car" && raycast.distance < 5.0f  && Vector3.Angle(car.transform.position, direction) > (90.0f+45.0f))
+>>>>>>> 6691145c7bd88180f8103d2d0c3da6143935c642
                 {
                     Debug.DrawRay(transform.position, direction, Color.red);
                     Debug.Log("SIGN IS VISIBLE! Type: " + type + " DISTANCE: " + raycast.distance);
